@@ -1,8 +1,8 @@
 .looks {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  padding: 8px;
+  gap: var(--s3);
+  padding: var(--s3);
   /* display: flex;
   height: 50vh; */
 }
@@ -58,7 +58,7 @@
   justify-content: center;
 }
 
-.categories > li {
+.categories > li a {
   font-weight: 700;
   font-size: 24px;
   display: flex;
@@ -68,6 +68,15 @@
   border: 2px solid black;
   padding: 4px 16px;
   margin-top: 16px;
+  color: black;
+  text-decoration: none;
+  transition: 0.15s;
+}
+
+.categories > li a:hover {
+  background-color: var(--dark);
+  color: white;
+  border: 2px solid transparent;
 }
 
 .categories > * + li {
@@ -84,7 +93,7 @@
 .lookbooks {
   margin: 64px 0;
   display: grid;
-  gap: 8px;
+  gap: var(--s3);
   padding: 0 16px;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -98,7 +107,7 @@
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8px;
+  gap: var(--s3);
   margin-top: 32px;
 }
 
@@ -113,7 +122,7 @@
 .post.beach-wedding .images {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
+  gap: var(--s3);
 }
 
 .post button {
@@ -130,7 +139,7 @@
     grid-column: 2 / -2;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 8px;
+    gap: var(--s3);
   }
   
   .post h2 {
@@ -155,12 +164,12 @@
 
 .recent-orders-list {
   display: grid;
-  gap: 8px;
+  gap: var(--s3);
 }
 
 .recent-orders-list li {
   display: grid;
-  gap: 8px;
+  gap: var(--s1);
 }
 
 .recent-orders-list li .date {
@@ -170,7 +179,7 @@
 
 .wishlist-products {
   display: grid;
-  gap: 8px;
+  gap: var(--s3);
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -179,12 +188,12 @@
 }
 
 .add-all-to-cart {
-  margin-top: 8px;
+  margin-top: var(--s3);
 }
 
 @media (min-width: 480px) {
   .orders-and-wishlist {
-    gap: 8px;
+    gap: var(--s3);
     grid-template-columns: repeat(12, 1fr);
   }
   .orders {

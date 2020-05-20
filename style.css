@@ -29,6 +29,10 @@ body {
   font-size: 16px;
 }
 
+a {
+  color: var(--primary);
+}
+
 h1,
 h2,
 h3,
@@ -79,6 +83,7 @@ ul {
   display: inline-block;
   appearance: none;
   background-color: transparent;
+  text-transform: uppercase;
   border: 2px solid black;
   border-radius: 2px;
   padding: 8px;

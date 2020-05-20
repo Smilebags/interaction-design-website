@@ -13,13 +13,20 @@ header {
 .circle {
   background-color: var(--dark);
   border-radius: 50%;
-  width: 120vw;
-  height: 120vw;
+  width: 90vw;
+  height: 90vw;
   position: absolute;
-  top: -110vw;
+  top: -77vw;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+}
+@media (min-width: 480px) {
+  .circle {
+    top: -110vw;
+    width: 120vw;
+    height: 120vw;
+  }
 }
 
 .logo {
@@ -28,7 +35,11 @@ header {
   color: white;
 }
 
-
+.menu img, .login img {
+  width: var(--s5);
+  height: var(--s5);
+  object-fit: contain;
+}
 
 footer {
   padding: var(--s4);
