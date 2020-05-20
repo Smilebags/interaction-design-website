@@ -2,7 +2,6 @@
 header {
   position: relative;
   display: grid;
-  /* background-color: var(--dark); */
   color: black;
   grid-template-columns: auto 1fr auto;
   grid-template-areas: 'menu . profile';
