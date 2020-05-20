@@ -1,13 +1,14 @@
 
 header {
-  /* height: 200px; */
   position: relative;
   display: grid;
   /* background-color: var(--dark); */
   color: black;
   grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'menu . profile';
   gap: var(--s4);
   padding: var(--s4);
+  height: 15vw;
 }
 
 .circle {
@@ -22,6 +23,9 @@ header {
   z-index: -1;
 }
 @media (min-width: 480px) {
+  header {
+    height: 10vw;
+  }
   .circle {
     top: -110vw;
     width: 120vw;
@@ -30,12 +34,22 @@ header {
 }
 
 .logo {
-  text-align: center;
-  font-size: 5vw;
+  position: absolute;
+  top:2vw;
+  left: 50%;
+  width: 15vw;
+  transform: translateX(-50%);
   color: white;
 }
 
-.menu img, .login img {
+.menu {
+  grid-area: menu;
+}
+.profile {
+  grid-area: profile;
+}
+
+.menu img, .profile img {
   width: var(--s5);
   height: var(--s5);
   object-fit: contain;
