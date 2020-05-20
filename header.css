@@ -1,0 +1,36 @@
+
+header {
+  /* height: 200px; */
+  position: relative;
+  display: grid;
+  /* background-color: var(--dark); */
+  color: black;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--s4);
+  padding: var(--s4);
+}
+
+.circle {
+  background-color: var(--dark);
+  border-radius: 50%;
+  width: 120vw;
+  height: 120vw;
+  position: absolute;
+  top: -110vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.logo {
+  text-align: center;
+  font-size: 5vw;
+  color: white;
+}
+
+
+
+footer {
+  padding: var(--s4);
+  background-color: var(--light-grey);
+}

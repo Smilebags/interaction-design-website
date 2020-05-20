@@ -1,0 +1,200 @@
+.looks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px;
+  /* display: flex;
+  height: 50vh; */
+}
+
+.looks img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.looks img:first-child {
+  grid-column: 1 / -1;
+  object-position: 75% 50%;
+}
+@media (min-width: 480px) {
+  .looks {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4vh;
+    padding-top: 10vh;
+    height: 68vh;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .looks img {
+    width: 40vh;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+
+  .looks img:first-child {
+    grid-column: unset;
+  }
+
+  .looks * + img {
+    margin-left: 4vh;
+  }
+}
+
+
+.shop-for {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.categories {
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categories > li {
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 64px;
+  border: 2px solid black;
+  padding: 4px 16px;
+  margin-top: 16px;
+}
+
+.categories > * + li {
+  margin-left: var(--s4);
+}
+
+@media (min-width: 480px) {
+  .categories {
+    max-width: 500px;
+  }
+}
+
+
+.lookbooks {
+  margin: 64px 0;
+  display: grid;
+  gap: 8px;
+  padding: 0 16px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.lookbook-title {
+  grid-column: 1 / -1;
+  font-size: calc(min(48px, 11vw));
+}
+
+.post {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.post .images {
+  grid-column: 1 / -1;
+}
+.post img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.post.beach-wedding .images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.post button {
+  align-self: end;
+  justify-self: start;
+}
+
+@media (min-width: 480px) {
+  .lookbook-title {
+    text-align: center;
+  }
+
+  .post {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+  }
+  
+  .post h2 {
+    grid-column: 3 / -1;
+  }
+  
+  .post p {
+    grid-column: 3 / 7;
+  }
+  .post button {
+    grid-column: 7 / -1;
+  }
+}
+
+
+.orders-and-wishlist {
+  display: grid;
+  gap: 16px;
+  margin: 32px 16px;
+  grid-template-columns: 1fr;
+}
+
+.recent-orders-list {
+  display: grid;
+  gap: 8px;
+}
+
+.recent-orders-list li {
+  display: grid;
+  gap: 8px;
+}
+
+.recent-orders-list li .date {
+  color: var(--grey);
+  font-size: 12px;
+}
+
+.wishlist-products {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wishlist-products img {
+  width: 100%;
+}
+
+.add-all-to-cart {
+  margin-top: 8px;
+}
+
+@media (min-width: 480px) {
+  .orders-and-wishlist {
+    gap: 8px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .orders {
+    grid-column: 4 / 7;
+  }
+  .wishlist {
+    grid-column: 7 / 10;
+  }
+  .orders-and-wishlist-title {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}
