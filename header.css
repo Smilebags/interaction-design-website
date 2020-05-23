@@ -53,8 +53,3 @@ header {
   height: var(--s5);
   object-fit: contain;
 }
-
-footer {
-  padding: var(--s4);
-  background-color: var(--light-grey);
-}

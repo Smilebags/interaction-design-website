@@ -6,7 +6,7 @@
   --secondary-light: #F3E2CF;
 
   --grey: #333;
-  --light-grey: #EEE;
+  --light-grey: #f8f8f8;
 
   --s1: 2px;
   --s2: 4px;
@@ -81,6 +81,9 @@ ul {
 
 .button {
   display: inline-block;
+  color: black;
+  text-decoration: none;
+  text-align: center;
   appearance: none;
   background-color: transparent;
   text-transform: uppercase;
@@ -91,8 +94,18 @@ ul {
   transition: 0.15s;
 }
 
+.button.secondary {
+  text-transform: unset;
+  border: none;
+  font-weight: 400;
+}
+
 .button:hover {
   background-color: var(--dark);
   color: white;
-  border: 2px solid transparent;
+}
+
+.button.secondary:hover {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.1);
 }

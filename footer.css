@@ -1,0 +1,22 @@
+
+footer {
+  padding: var(--s4);
+  background-color: var(--light-grey);
+  display: grid;
+  gap: var(--s3);
+  font-family: 'Spartan', sans-serif;
+  font-weight: 300;
+}
+
+@media (min-width: 480px) {
+  footer {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: '. . p p s s . . . . . .';
+  }
+  .pages {
+    grid-area: p;
+  }
+  .social {
+    grid-area: s;
+  }
+}
