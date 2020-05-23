@@ -58,17 +58,17 @@ export default {
   },
   template: html`
     <header>
-      <span class="menu"><img src="/images/icon/menu.svg" alt=""></span>
+      <span class="menu"><img src="images/icon/menu.svg" alt=""></span>
       <a class="logo" href="/" v-html="logoIconText"></a>
       <span class="right">
-        <span @click="navigateTo('/404.html')" class="profile"><img src="/images/icon/profile.svg" alt=""></span>
+        <span @click="navigateTo('/404.html')" class="profile"><img src="images/icon/profile.svg" alt=""></span>
         <span @click="navigateTo('/404.html')" class="bag">
           <div class="size-message" v-if="showSizeMessage">
             <p class="h4">We don't know your size yet!</p>
             <a class="button" href="/settings.html">Set Preferences</a>
             <a class="button secondary" @click.stop="dismissSizeMessage">Later</a>
           </div>
-          <img src="/images/icon/bag.svg" alt="">
+          <img src="images/icon/bag.svg" alt="">
           <span
             class="counter"
             :class="{ bounce: bounceBag }"
@@ -76,7 +76,7 @@ export default {
           >{{bag.length}}</span>
         </span>
         <span @click="navigateTo('/404.html')" class="wishlist">
-          <img src="/images/icon/heart.svg" alt="">
+          <img src="images/icon/heart.svg" alt="">
           <span
             class="counter"
             :class="{ bounce: bounceWishlist }"

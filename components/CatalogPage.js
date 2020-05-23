@@ -47,7 +47,7 @@ export default {
           />
         </div>
       </main>
-      <link rel="stylesheet" href="/footer.css">
+      <link rel="stylesheet" href="footer.css">
       <Footer />
     </div>
     `,
