@@ -59,7 +59,7 @@ export default {
   template: html`
     <header>
       <span class="menu"><img src="images/icon/menu.svg" alt=""></span>
-      <a class="logo" href="/" v-html="logoIconText"></a>
+      <a class="logo" href="/interaction-design-website/index.html" v-html="logoIconText"></a>
       <span class="right">
         <span @click="navigateTo('/404.html')" class="profile"><img src="images/icon/profile.svg" alt=""></span>
         <span @click="navigateTo('/404.html')" class="bag">
