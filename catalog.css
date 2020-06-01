@@ -126,7 +126,7 @@ main {
   border-radius: 50%;
   background-color: var(--primary);
   cursor: pointer;
-  background-image: url('/images/icon/plus.svg');
+  background-image: url('images/icon/plus.svg');
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
