@@ -1,0 +1,137 @@
+
+header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  display: grid;
+  color: black;
+  grid-template-columns: 124px 1fr 124px;
+  grid-template-areas: 'menu logo right';
+  gap: var(--s4);
+  padding: var(--s4);
+  align-items: center;
+}
+
+
+.logo {
+  height: 32px;
+  margin: auto;
+  color: black;
+  display: block;
+}
+
+.logo svg {
+  height: 32px;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.right {
+  font-size: 0;
+  grid-area: right;
+  display: grid;
+  gap: var(--s3);
+  direction: rtl;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.right * {
+  font-size: 16px;
+}
+.profile, .bag, .wishlist {
+  display: block;
+}
+
+.bag, .wishlist {
+  position: relative;
+}
+
+main {
+  margin-top: 80px;
+  margin-bottom: 32px;
+  display: grid;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+main img {
+  width: 100%;
+}
+
+.size-container {
+  display: grid;
+  gap: 8px;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+}
+
+.sizes {
+  appearance: none;
+  padding: 8px;
+  display: block;
+  color: black;
+  text-decoration: none;
+  appearance: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 8px;
+}
+
+.info-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto 1fr;
+  gap: 16px;
+}
+
+.info-top > div {
+  width: 100%;
+}
+
+.delivery-options {
+  display: grid;
+  gap: 8px;
+}
+
+.small-product-images {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  main {
+    grid-template-columns: 1fr calc((70 * (4/5)) * 1vh) 2fr 2fr;
+    grid-template-rows: 70vh;
+    grid-template-areas: 'a b c d';
+  }
+
+  .small-product-images {
+    grid-area: a;
+    height: 100%;
+    overflow-y: scroll;
+    display: block;
+  }
+  
+  .large-product-image {
+    grid-area: b;
+  }
+
+  .info {
+    grid-area: c;
+  }
+
+  .delivery {
+    grid-area: d;
+  }
+}

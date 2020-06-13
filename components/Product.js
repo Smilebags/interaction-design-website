@@ -38,10 +38,13 @@ export default {
       this.addMenuExpanded = false;
       this.onAddToWishlist(this.product);
     },
+    navigate() {
+      location.href = 'product.html';
+    },
   },
   template: html`
-  <div class="product">
-    <div @click="expandAddMenu" class="add" :class="{ open: addMenuExpanded }">
+  <a @click="navigate" class="product">
+    <div @click.stop="expandAddMenu" class="add" :class="{ open: addMenuExpanded }">
       <div class="add-to">
         <span>Add To</span>
         <span @click.stop="addToBag"><span class="bag" v-html="bagIconText"></span> Bag</span>
@@ -49,5 +52,5 @@ export default {
       </div>
     </div>
     <img :src="product.url">
-  </div>`,
+  </a>`,
 };
