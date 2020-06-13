@@ -54,7 +54,7 @@ export default {
             </div>
           </div>
           <div class="info-bottom">
-            <a href="checkout.html" class="button quick-buy" >Quick Buy</a>
+            <a href="/checkout.html" class="button quick-buy" >Quick Buy</a>
           </div>
         </div>
         <div class="delivery">
@@ -70,7 +70,7 @@ export default {
                 Standard delivery delivery: Free
               </input>
             </div>
-            <a href="checkout.html" class="button" >Checkout</a>
+            <a href="/checkout.html" class="button" >Checkout</a>
 
           </div>
         </div>
