@@ -125,7 +125,7 @@
   gap: var(--s3);
 }
 
-.post button {
+.post a {
   align-self: end;
   justify-self: start;
 }
