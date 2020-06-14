@@ -1,0 +1,156 @@
+
+header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  display: grid;
+  color: black;
+  grid-template-columns: 124px 1fr 124px;
+  grid-template-areas: 'menu logo right';
+  gap: var(--s4);
+  padding: var(--s4);
+  align-items: center;
+}
+
+
+.logo {
+  height: 32px;
+  margin: auto;
+  color: black;
+  display: block;
+}
+
+.logo svg {
+  height: 32px;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.right {
+  font-size: 0;
+  grid-area: right;
+  display: grid;
+  gap: var(--s3);
+  direction: rtl;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.right * {
+  font-size: 16px;
+}
+.profile, .bag, .wishlist {
+  display: block;
+}
+
+.bag, .wishlist {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  font-size: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin-top: 80px;
+  margin-bottom: 32px;
+  display: grid;
+  gap: 32px;
+  padding: 0 16px;
+}
+
+main img {
+  width: 100%;
+}
+
+.products, .product-list, .delivery, .qty, .size, .info {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+
+.qty, .size {
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+}
+
+.delivery {
+  grid-template-rows: repeat(8, auto) 1fr;
+}
+
+.info {
+  grid-template-rows: repeat(3, auto) 1fr;
+}
+
+.product {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.styled {
+  appearance: none;
+  width: 100%;
+  padding: 8px;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.delivery-estimate {
+  border-radius: 4px;
+  background-color: var(--light-grey);
+  border: 1px solid #f0f0f0;
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+}
+
+.delivery-option {
+  font-weight: 600;
+}
+
+.saved-payment {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+
+.price-before {
+  color: var(--secondary);
+  text-decoration: line-through
+}
+
+@media (min-width: 480px) {
+  main {
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: 'products delivery';
+    gap: 32px;
+  }
+
+  .products {
+    grid-area: products;
+  }
+  .delivery {
+    grid-area: delivery;
+  }
+
+}
