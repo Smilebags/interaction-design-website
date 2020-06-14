@@ -97,7 +97,7 @@ export default {
               \${{withSpecial.toFixed(2)}}
             </span>
           </div>
-          <a href="/" class="button">Buy</a>
+          <a href="/404.html" class="button">Buy</a>
         </div>
       </main>
       <link rel="stylesheet" href="footer.css">
